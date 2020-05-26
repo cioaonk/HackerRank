@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the 'main' function below.
+
+void solve() {
+    int numInitial = 0;
+    cin >> numInitial;
+    int numRow = 0;
+    int rowIndex = 0;
+    if(numInitial <= 1 && numInitial != 0){
+        cout << "*";
+}
+    else{
+        numRow = 0;
+        while( numRow <= numInitial){
+            while(rowIndex <= numRow){
+               cout << "*";
+                rowIndex++;
+            }
+            cout << endl;
+            rowIndex = 0;
+            ++numRow;
+            if(numRow == numInitial){
+                break;
+            }
+        }
+    }
+}
+
+int main()
+{
+    solve();
+    return 0;
+}
