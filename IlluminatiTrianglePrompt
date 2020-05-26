@@ -1,0 +1,29 @@
+The Illuminati need your help! Given input of the height of the triangle, generate the Illuminati triangle.
+
+Input Format
+ x = the size of the triangle
+ 
+Constraints
+0 < x < 100
+
+Output Format
+A triangle that is x rows tall, where the ith row is i stars wide
+
+Sample Input 
+
+10
+Sample Output 
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+Explanation 
+
+The triangle has 10 rows, each row having an additional start added to it so that the final row has 10 stars.
