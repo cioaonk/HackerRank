@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the 'main' function below.
+bool isEven(int numInput){
+    int remainder = 0;
+    remainder = numInput%2;
+    if(remainder == 0)
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+void solve() {
+    int numInitial = 0;
+    cin >> numInitial;
+    int numRow = 0;
+    int rowIndex = 0;
+    bool numEven = false;
+    if(numInitial <= 1 && numInitial != 0){
+        cout << "@";
+}
+    else{
+        numRow = 0;
+        while( numRow <= numInitial){
+            while(rowIndex <= numRow){
+                numEven = isEven(numRow);
+                if(numEven == 0){
+                    cout << "*";
+                }
+                else{
+                   cout << "@";
+               }
+                rowIndex++;
+            }
+            cout << endl;
+            rowIndex = 0;
+            ++numRow;
+            if(numRow == numInitial){
+                break;
+            }
+        }
+    }
+}
+
+
+int main()
+{
+    solve();
+    return 0;
+}
